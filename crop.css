@@ -1,0 +1,44 @@
+
+.custom-row {
+    display: flex;
+    align-items: center;
+
+}
+
+.custom-row1 {
+    align-items: center;
+    text-align: center;
+    font-weight: bold;
+    flex: 0.5;
+    background: #a1ded9;
+    padding: 10px;
+    /* Increase height by adjusting padding */
+}
+
+.custom-col {
+    flex: 1;
+    padding: 10px;
+    border-left: 1px solid white;
+
+}
+
+.custom-col:first-child {
+    flex: 0.5;
+    /* Make the title column smaller */
+    text-align: center;
+    /* Center the title text */
+    font-weight: bold;
+    /* Make the text bold */
+}
+
+.custom-row:nth-child(odd) {
+    background-color: #a1ded9;
+    /* Red background for odd rows */
+}
+
+.container {
+    border: 1px solid black;
+    /* Add black border around the entire table */
+    border-radius: 5px;
+    /* Add rounded corners to the table */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFarm</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="crop.css">
+</head>
+
+<body>
+    <div id="header-container"></div>
+    <div class="container">
+        <div class="custom-row1 bg-red">
+            Cultivation Tips For Onion
+        </div>
+        <div class="custom-row">
+            <div class="custom-col">
+                Details
+            </div>
+        <div class="custom-col">
+                <b>Farming Methods</b>
+            </div>
+        </div>
+        <div class="custom-row">
+            <div class="custom-col">
+                Land
+            </div>
+            <div class="custom-col">
+                The soil should be well drained, light to medium. Limestone content should not be more than 8%, also
+                electrical conductivity 2 de.C. should not be less than per meter. The ratio should be between 6.1 and
+                7.5.
+            </div>
+        </div>
+
+        </div>
+        <div id="footer-container"></div>
+<script>
+  // Load the header
+    $("#header-container").load("header.html", function () {
+        // Header has been loaded
+     });
+
+// Load the footer
+    $("#footer-container").load("footer.html", function () {
+         // Footer has been loaded
+    });
+</script>
+</body>
+
+</html>
