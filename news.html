@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFarm</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        body .news-container {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .news-container {
+            margin: 20px auto;
+            text-align: center;
+        }
+        .video-container {
+            display: flex;
+            align-items: center;
+            margin: 20px;
+        }
+        iframe {
+            width: 640px; /* Adjust the width as needed */
+            height: 360px; /* Adjust the height as needed */
+        }
+        .video-info {
+            flex: 1;
+            padding: 10px;
+        }
+        h2, p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="header-container"></div>
+
+    <!--Main content goes here -->
+    <div class="news-container">
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/3izVXKON0xI" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>शेती योजना 2023 | कृषि योजना 2023 | shetkari yojana 2023 maharashtra</h2>
+                <p>Reconciliation Scheme - There are often disputes between farmers regarding land possession and wahi-wati, now to settle these disputes, the Maharashtra Government has introduced the Reconciliation Scheme. The scheme will provide concession in registration fee and stamp duty for exchange deed of agricultural land holders if the possession of agricultural land in the name of one farmer is with another and if the possession of agricultural land in the name of the other farmer is with the first farmer. Stamp duty will be Rs.1000 and registration fee will be Rs.100 for exchange of deed registration. The scheme will create positivity among the farmers and the cases in various courts will be settled and there will be no unnecessary interference of land surveyors.
+                    👉Application Procedure - Talathi or Mandal Officer Agriculture Department </p>
+            </div>
+        </div>
+    
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/jXRckAaNvAY" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>weather forecast</h2>
+                <p> Farmer friends, you don't need to worry about this, heavy rain is predicted in your area soon. We have to plan our work accordingly</p>
+            </div>
+        </div>
+    
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/uphRoxIZpVQ" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>If farmers give land for 30 years they will pay Rs 1000 as rent</h2>
+                <p></p>
+            </div>
+        </div>
+    
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/KHRKKvfISJ0" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>All Important Agriculture Schemes</h2>
+                <p>All Important Agriculture Schemes / सभी महत्वपूर्ण कृषि योजनाएँ for IBPS AFO Mains, FCI, NABARD, RAEO, RHEO, TGT Agriculture, PGT Agriculture, Block Agriculture Officer, Assistant Agriculture Officer.</p>
+            </div>
+        </div>
+    
+        <div class="video-container">
+            <iframe width="640" height="360" src="https://www.youtube.com/embed/Kl0ZFcIYPic" frameborder="0" allowfullscreen></iframe>
+            <div class="video-info">
+                <h2>Pik Vima 2023 : Does crop insurance cover in case of rain failure? How is it given?</h2>
+                <p>The Maharashtra government has implemented a crop insurance scheme of Rs 1 in the state from this year. 1 crore 69 lakh farmers of the state have participated in this scheme.
+                    On the other hand, there is heavy rainfall in most parts of the state. Due to lack of rain, soybean crop failed. Cotton leaves are falling. Farmers are saying that the production will decrease due to this.
+                    In such a situation, questions are being raised as to whether the farmers who have participated in the crop insurance scheme will get insurance compensation and if so, how much they will get. </p>
+            </div>
+        </div>
+    </div>
+    
+
+    <div id="footer-container"></div>
+    
+    <script>
+        // Load the header
+        $("#header-container").load("header.html", function () {
+            // Header has been loaded
+        });
+
+        // Load the footer
+        $("#footer-container").load("footer.html", function () {
+            // Footer has been loaded
+        });
+    </script>
+</body>
+</html>

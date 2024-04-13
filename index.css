@@ -1,0 +1,531 @@
+/* ==================style for header============================ */
+
+/* Header styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  /* Header background color */
+  padding: 10px 20px;
+  color: white;
+}
+
+.login-button {
+  padding: 8px 16px;
+  background-color: #1fcb1f;
+  /* Button background color */
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #21a9cfd7
+    /* Button background color on hover */
+}
+
+.techfarm {
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+/* Close button styles */
+.close-button {
+  position: absolute;
+  top: 10px;
+  /* Adjust the top position as needed */
+  right: 20px;
+  /* Adjust the right position as needed */
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/*====================================== Style for the Contact Us section============================ */
+#contact-section {
+  background-color: #f8f7f7;
+  /* Changed background color */
+  color: #333;
+  padding: 20px;
+  min-height: 100vh;
+  /* Minimum height to fill the viewport */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+/* Center the h2 in the Contact Us section */
+#contact-section h2 {
+  font-size: 2em;
+  text-align: center;
+  color: #333;
+  font-weight: bold;
+}
+
+/* ...Rest of your CSS... */
+#contact-section p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  text-align: center;
+  /* Center the paragraph */
+  color: #333;
+  font-weight: bold;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.contact-info-icon {
+  height: 50px;
+  /* Make the icons slightly smaller */
+  width: 50px;
+  /* Make the icons slightly smaller */
+  background-color: hsl(0, 0%, 3%);
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-info-icon i {
+  font-size: 30px;
+  /* Adjust the icon size */
+  line-height: 50px;
+  /* Center the icon vertically */
+  color: hsl(195, 13%, 94%);
+}
+
+.contact-info-content {
+
+  margin-left: 20px;
+}
+
+.contact-info-content h4 {
+  font-size: 1.4em;
+  margin-bottom: 5px;
+}
+
+.contact-info-content p {
+  font-size: 1em;
+  color: #fff;
+}
+
+.contact-form {
+  background-color: #fff;
+  padding: 40px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.contact-form h2 {
+  font-weight: bold;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #333;
+  text-align: center;
+  /* Center the heading */
+}
+
+.contact-form .input-box {
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form .input-box input,
+.contact-form .input-box textarea {
+  width: 100%;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  border: none;
+  border-bottom: 2px solid #333;
+  outline: none;
+  resize: none;
+}
+
+.contact-form .input-box span {
+  position: absolute;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  margin: 10px 0;
+  pointer-events: none;
+  transition: 0.5s;
+  color: #666;
+}
+
+.contact-form .input-box input:focus~span,
+.contact-form .input-box textarea:focus~span {
+  color: #e91e63;
+  font-size: 12px;
+  transform: translateY(-20px);
+}
+
+.contact-form .input-box input[type="submit"] {
+  width: 100%;
+  background: #00bcd4;
+  color: #FFF;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #00bcd4;
+  transition: 0.5s;
+}
+
+.contact-form .input-box input[type="submit"]:hover {
+  background: #FFF;
+  color: #00bcd4;
+}
+
+/* Increase the send message form width */
+.contact-form {
+  max-width: 500px;
+  /* Adjust the width as needed */
+  margin: 0 auto;
+  /* Center the form horizontally */
+}
+
+
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens here... */
+}
+
+/*========================================== style for servises and feature===============================*/
+/* google fonts link */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.theme-text {
+  color: #474af0;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+}
+
+.card {
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Interactive hover effect */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  color: white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0%;
+  background: #474af0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.card:hover::before {
+  left: 0%;
+  color: white;
+}
+
+.container-fluid {
+  background-image: url("blob-scene-haikei.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+/* google fonts link */
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+.theme-text {
+  color: #474af0;
+}
+
+.card-img-top {
+  height: 200px;
+  width: 100%;
+}
+
+.card {
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Interactive hover effect */
+.service-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  color: white;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0%;
+  background: #474af0;
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.card:hover::before {
+  left: 0%;
+  color: white;
+}
+
+.container-fluid {
+  background-image: url("blob-scene-haikei.svg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+/*====================================style for about us ===========================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+.about-us {
+  width: 100%;
+  padding: 50px 0;
+  /* Adjust padding as desired */
+  display: flex;
+  align-items: center;
+  /* Vertically center align content */
+  justify-content: center;
+  /* Horizontally center align content */
+  text-align: center;
+}
+
+.about {
+  width: 90%;
+  /* Adjust the width of the about section */
+  max-width: 1130px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row-reverse;
+  /* Reverse the order of the image and text */
+  align-items: center;
+  text-align: center;
+}
+
+.pic {
+  width: auto;
+  /* Allow the width to adjust proportionally */
+  height: auto;
+  /* Allow the height to adjust based on content */
+  max-width: 100%;
+  /* Ensure the image fits within the container */
+  max-height: 100%;
+  /* Ensure the image fits within the container */
+  display: block;
+  margin: 0 auto;
+}
+
+.abouttext {
+  width: 100%;
+  max-width: 540px;
+  /* Adjust the width of the text container */
+  /* height: auto;  Set a fixed height for the text container */
+
+}
+
+.abouttext h2 {
+  font-size: 40px;
+  /* Reduce the font size for better readability */
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.abouttext h5 {
+  font-size: 18px;
+  /* Reduce the font size for better readability */
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+span {
+  color: #4070f4;
+}
+
+.abouttext p {
+  font-size: 16px;
+  /* Reduce the font size for better readability */
+  line-height: 24px;
+  /* Increase line-height for better readability */
+  letter-spacing: 1px;
+}
+
+.data {
+  margin-top: 20px;
+  /* Adjust margin as needed */
+}
+
+.hire {
+  font-size: 16px;
+  /* Reduce the font size for better readability */
+  background: #4070f4;
+  color: #fff;
+  text-decoration: none;
+  border: none;
+  padding: 8px 20px;
+  /* Adjust padding as needed */
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.hire:hover {
+  background: #000;
+  border: 1px solid #4070f4;
+}
+
+.container-fluid.mb-5 {
+  margin-bottom: 30px;
+  /* Adjust as needed */
+}
+
+/* Adjust the image height in the "About Us" section */
+
+
+/* Add a new style for the two equal sections */
+.about-us-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+.about-text {
+  padding: 50px;
+}
+
+
+/*========================================style for footer==================================*/
+.footer {
+  background: #000;
+  padding: 30px 0px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+}
+
+.footer .row {
+  width: 100%;
+  margin: 1% 0%;
+  padding: 0.6% 0%;
+  color: gray;
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .row a {
+  text-decoration: none;
+  color: gray;
+  transition: 0.5s;
+  margin: 0 10px;
+}
+
+.footer .row a:hover {
+  color: #fff;
+}
+
+.footer .row ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer .row ul li {
+  display: inline-block;
+  margin: 0px 0px;
+}
+
+.footer .row a i {
+  font-size: 2em;
+}
+
+@media (max-width: 720px) {
+  .footer {
+    text-align: left;
+    padding: 5%;
+  }
+
+  .footer .row ul li {
+    display: block;
+    margin: 10px 0px;
+    text-align: left;
+    margin: 0px 10px;
+  }
+
+  .footer .row a i {
+    margin: 0% 3%;
+  }
+
+}
+
+.social-icons {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  /* Display icons horizontally */
+}
+
+.social-icons li {
+  margin-right: 100px;
+  /* Adjust the space between icons */
+  margin-left: 100px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: gray;
+  font-size: 12px;
+  /* Adjust the icon size */
+}

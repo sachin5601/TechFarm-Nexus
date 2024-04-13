@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TechFarm Nexus </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlF5r5u5f5f5u5s5a5h5i5r5i5h5u5m5n5a5n5g5T5I5T5T5Y5N5" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+  <!--<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>-->
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <!-- ====================================== header ====================================================== -->
+  <div class="header">
+    <a href="#" class="techfarm">TechFarm</a>
+    <a href="login.html" class="login-button">Login</a>
+  </div>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">TechFarm</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about-us">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact-section">contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services-and-features">services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="agri/auth/BuyerLogin.php">AgroCraft</a>
+          </li>
+
+          <!--login need message-->
+          <div id="loginMessage" class="alert alert-warning" style="display: none;">
+            You need to <a href="login.html">log in</a> to access this feature.
+            <span class="close-button" onclick="closeLoginMessage()">&times;</span>
+          </div>
+
+
+
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Features
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="#" onclick="showLoginMessage('Crop Recommendation')">Crop
+                  Recommendation</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showLoginMessage('Weather Prediction')">Weather
+                  Prediction</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showLoginMessage('Mandi Market Price')">Mandi Market Price
+                </a></li>
+              <li><a class="dropdown-item" href="#" onclick="showLoginMessage('Soil Testing')">Soil Testing</a></li>
+              <li><a class="dropdown-item" href="#" onclick="showLoginMessage('Cultivation Tips')">Cultivation Tips</a>
+              </li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#" onclick="showLoginMessage('Kirishi Market')">KRISHI MARKET</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#" onclick="showLoginMessage('community')">COMMUNITY</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <script>
+    function showLoginMessage(featureName) {
+      var loginMessage = document.getElementById("loginMessage");
+      loginMessage.innerHTML = 'You need to <a href="login.html">log in</a> to access the "' + featureName + '" feature.';
+      loginMessage.style.display = "block";
+    }
+
+    function closeLoginMessage() {
+      var loginMessage = document.getElementById("loginMessage");
+      loginMessage.style.display = "none";
+    }
+  </script>
+  <script>
+    function showLoginMessage(featureName) {
+      var loginMessage = document.getElementById("loginMessage");
+      loginMessage.innerHTML = 'You need to <a href="login.html">log in</a> to access the "' + featureName + '" feature.';
+      loginMessage.style.display = "block";
+    }
+
+    function closeLoginMessage() {
+      var loginMessage = document.getElementById("loginMessage");
+      loginMessage.style.display = "none";
+    }
+  </script>
+
+
+  <div class="container-fluid mb-5">
+    <div class="container-fluid">
+      <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+          <!-- Indicator buttons for slides (example) -->
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <!-- Slide 1 -->
+          <div class="carousel-item active">
+            <img src="Images/logo1.jpg" class="d-block w-100" alt="TechFarm Logo">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>TechFarm</h5>
+              <p>Welcome to our farming revolution.</p>
+            </div>
+          </div>
+          <!-- Slide 2 -->
+          <div class="carousel-item">
+            <img src="Images/logo.webp" class="d-block w-100" alt="Helpful Growing Tips">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Helpful Growing Tips</h5>
+              <p>Discover valuable tips for successful farming.</p>
+            </div>
+          </div>
+          <!-- Slide 3 -->
+          <div class="carousel-item">
+            <img src="Images/logo_3.jpeg" class="d-block w-100" alt="Track Your Crop">
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Track Your Crop</h5>
+              <p>Monitor and manage your crops with ease.</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <!-- Left arrow for carousel (example) -->
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <!-- Right arrow for carousel (example) -->
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================== About us section ===============================================================-->
+  <section id="about-us">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <img src="Images/about.jpg" class="pic" alt="CoderGirl">
+        </div>
+        <div class="col-md-6">
+          <div class="abouttext">
+            <h2>About Us</h2>
+            <h5> Welcome to Our Farming Revolution <span></span></h5>
+            <p>At Our Farming Revolution, we stand firmly by our belief in the invaluable contribution of farmers to our
+              communities and our world. We recognize the challenges faced by the agricultural community and are
+              dedicated to making a meaningful difference.
+
+              Our commitment is deeply rooted in the understanding that farming is not just a profession; it's a way of
+              life. We understand the determination, hard work, and love for the land that drive every farmer. With this
+              empathy and respect as our guiding principles, we are taking bold steps to revolutionize the farming
+              experience.
+
+              Our goal is simple yet transformative: to provide farmers with the tools, knowledge, and support they need
+              to thrive in a rapidly changing world. Through innovative technology, sustainable practices, and a strong
+              sense of community, we are cultivating a brighter future for all.
+
+              Join us in this journey as we harness the power of technology, collaboration, and shared wisdom to empower
+              farmers and elevate agriculture to new heights. The time for action is now, and together, we will lead the
+              way towards a more prosperous and sustainable future for farmers everywhere.
+
+              Thank you for being a part of Our Farming Revolution.
+            </p>
+            <div class="data">
+              <a href="#" class="hire">Know More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+  <!-- ================================================ Features and sevice ======================-->
+  <section id="services-and-features"></section>
+  <div class="container-fluid">
+    <h1 class="text-center mt-5 display-3 fw-bold">Our <span class="theme-text">Services</span></h1>
+    <hr class="mx-auto mb-5 w-25">
+    <!-- Section for Services and Features -->
+
+    <div class="row mb-5">
+      <!-- Card 1 -->
+      <div class="col-12 col-sm-4">
+        <div class="card shadow service-card">
+          <img src="images/feature_soil.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="text-center">SOIL TESTING</h3>
+            <hr class="mx-auto w-75">
+            <p>
+              We analyzes the soil type and its properties based on our data and provide accurate information to user
+              <br>Our sole rover is equipped for soil testing, providing us with highly accurate results. </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="col-12 col-sm-4">
+        <div class="card shadow service-card">
+          <img src="images/feature_weather.png" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="text-center">WEATHER PREDICTION </h3>
+            <hr class="mx-auto w-75">
+            <p>
+              "We empower farmers with easy weather predictions, guiding them to plant crops at the perfect time for a
+              successful harvest." </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="col-12 col-sm-4">
+        <div class="card shadow service-card">
+          <img src="images/feature_crop.jpg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="text-center">CROP RECOMMENDATION</h3>
+            <hr class="mx-auto w-75">
+            <p>
+              "We suggest the best crops based on your soil, making farming easier for you. Let your soil type be your
+              guide to a successful harvest!" </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-5">
+      <!-- Card 4 -->
+      
+      <div class="col-12 col-sm-4">
+        <div class="card shadow service-card"onclick="window.location.href='#';" style="cursor: pointer;">
+          
+          <img src="images/feature_market.jpeg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="text-center">AgroCraft
+
+            </h3>
+            <hr class="mx-auto w-75">
+            <p>Portal for Farmers to sell their produce at a better rate .
+            
+              System that provides farmers an interface to sell their product, and connect with the buyers all over India.
+              
+              Simple interface that works on smart devices, SMS to upload product details and respond via phone and
+              SMS.</p>
+          </div>
+        </div>
+      </div>
+    
+      <!-- Card 5 -->
+      <div class="col-12 col-sm-4">
+        <div class="card shadow service-card">
+          <img src="Images/feature_pestisides.jpeg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="text-center">PESTISIDE AND GERMICIDE RECOMMENDATION </h3>
+            <hr class="mx-auto w-75">
+            <p>
+              We suggest best suitable fertilizers that suits your crops and we take the responsibility that farmers get
+              good quality fertilizers and in cheap rates.</p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="col-12 col-sm-4">
+        <div class="card shadow service-card">
+          <img src="images/feature_cultivation.jpeg" alt="" class="card-img-top">
+          <div class="card-body">
+            <h3 class="text-center">CULTIVATION TIPS </h3>
+            <hr class="mx-auto w-75">
+            <p>
+              Our experienced team provides best cultivation ideas to farmers to get a good yield , so you can easily
+              make your crops happy and healthy. Your guide to stress-free farming starts here!"</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    </section>
+  </div>
+
+</body>
+
+</html>
+
+<!-- ============================================ agro craft ================================ -->
+<section id="agrocraft">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <img src="Images/agrocraft.jpeg" class="pic" alt="CoderGirl">
+      </div>
+      <div class="col-md-6">
+        <div class="abouttext">
+          <h2>AgroCraft</h2>
+     
+          <p>AgroCraft is a cutting-edge system dedicated to providing consumers with the freshest and highest-quality food and farming products. Through the AgroCraft website, customers can easily browse and purchase a wide range of products directly from local farms and producers. With a focus on freshness and sustainability, AgroCraft aims to revolutionize the way people access and enjoy nutritious food while supporting local agriculture.
+       </p>
+       <p>At AgroCraft, we bring you the freshest and highest-quality food and farming products directly from local farms and producers. Our user-friendly website allows you to easily browse and purchase a wide range of goods, including seasonal fruits and vegetables, artisanal dairy products, and ethically sourced meats. By buying from AgroCraft, you support local agriculture and enjoy nutritious food with minimal environmental impact. Simply visit our website, explore our diverse selection, and make your purchase hassle-free. Join us in revolutionizing the way you access and enjoy farm-fresh goodness!</p>
+          <div class="data">
+            <a href="agri/auth/BuyerLogin.php" class="hire">Visit AgroCraft</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================ Contact Us Section ================================ -->
+<section id="contact-section">
+  <div class="container">
+    <h2>Contact Us</h2>
+    <p>
+      Welcome to TechFarm Nexus Contact Page<br>
+      At TechFarm Nexus, we are dedicated to supporting farmers and fostering agricultural growth. Your questions,
+      feedback, and inquiries are important to us. Whether you need assistance with our services, have suggestions for
+      improvement, or simply want to connect with our team of experts, this is the place to reach out. We value your
+      input and look forward to assisting you on your farming journey. Please feel free to contact us through the
+      information below, and we'll be in touch shortly.
+    </p>
+  </div>
+
+  <!-- Contact Information -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-info-content">
+              <h4>Address</h4>
+              <p1>Sector-4, Kharghar,<br /> Navi Mumbai, Maharashtra, <br />410210</p1>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <i class="fas fa-phone"></i>
+          </div>
+          <div class="contact-info-content">
+            <h4>Phone</h4>
+            <p1>+91-9146313028</p1>
+          </div>
+        </div>
+
+        <div class="contact-info-item">
+          <div class="contact-info-icon">
+            <i class="fas fa-envelope"></i>
+          </div>
+          <div class="contact-info-content">
+            <h4>Email</h4>
+            <p1>techfarm@gmail.com</p1>
+          </div>
+        </div>
+      </div>
+
+      <!-- ============================== Contact Form ======================================= -->
+      <div class="col-md-6">
+        <div class="contact-form">
+          <form action="message.php" method="POST" id="contact-form">
+            <!-- Your form fields here -->
+            <div class="input-box">
+              <input type="text" required="true" name="fullname">
+              <span>Full Name</span>
+            </div>
+
+            <div class="input-box">
+              <input type="email" required="true" name="email">
+              <span>Email</span>
+            </div>
+
+            <div class="input-box">
+              <textarea required="true" name="message" rows="4" cols="50"></textarea>
+              <span>Type your Message...</span>
+            </div>
+
+            <div class="input-box">
+              <input type="submit" value="Send" name="submit">
+            </div>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--==================================================== footer ================================================== -->
+<div class="footer">
+  <!-- Your footer content here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+    integrity="sha384-wvfXpqpZZVQGK6TAh5PVlF5r5u5f5f5u5s5a5h5i5r5i5h5u5m5n5a5n5g5T5I5T5T5Y5N5" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/c32adfdcda.js" crossorigin="anonymous"></script>
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <ul class="social-icons">
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-youtube"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+        </ul>
+      </div>
+      <div class="row">
+        <ul>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Our Services</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+          <li><a href="#">Career</a></li>
+        </ul>
+      </div>
+
+      <div class="row" style="text-align: center; margin-top: 10px; font-size: 14px;">
+        TechFarm Copyright © 2023 - All rights reserved
+      </div>
+    </div>
+  </footer>
+
+
+</div>
+
+</body>
+
+</html>

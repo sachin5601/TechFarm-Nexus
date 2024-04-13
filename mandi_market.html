@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechFarm</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="mandi_market.css">
+   
+</head>
+<body>
+    <div id="header-container"></div>
+
+
+
+   
+  
+        <section class="section market" aria-label="market update" data-section>
+            <div class="container">
+                <div class="title-wrapper">
+                    <h2 class="section-title">Mandi Market Updates</h2>
+                </div>
+                <table class="market-table">
+                    <thead class="table-head">
+                        <tr class="table-row table-title">
+                            <th class="table-heading" scope="col">Name</th>
+                            <th class="table-heading" scope="col">Price</th>
+                            <th class="table-heading" scope="col">Change</th>
+                            <th class="table-heading" scope="col">% Change</th>
+                            <th class="table-heading" scope="col">Contract</th>
+                            <th class="table-heading" scope="col">Time (EDT)</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body"></tbody>
+                </table>
+            </div>
+        </section>
+        <script src="mandi_market.js"></script>
+    </body>
+    </html>
+    
+
+
+    <div id="footer-container"></div>
+    
+    <script>
+        // Load the header
+        $("#header-container").load("header.html", function () {
+            // Header has been loaded
+        });
+
+        // Load the footer
+        $("#footer-container").load("footer.html", function () {
+            // Footer has been loaded
+        });
+    </script>
+</body>
+</html>
