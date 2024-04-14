@@ -1,11 +1,11 @@
 // Function to fetch agriculture data
 async function fetchAgricultureData() {
-    const API_URL = 'https://bloomberg-api.p.rapidapi.com/bloomberg/agriculture';
+    const API_URL = 'https://bloomberg-api.p.rapidapi.com/bloomberg/agriculture'
 
     try {
         const response = await fetch(API_URL, {
             headers: {
-                'X-RapidAPI-Key': '67d8f1bf7dmsh6805bf86bba413ep1450f2jsn703def92587a',
+                'X-RapidAPI-Key': '55cdedbea8msha7ce66d4412ea79p1f4ca6jsn2a05e28e6d70',
                 'X-RapidAPI-Host': 'bloomberg-api.p.rapidapi.com'
             }
         });
