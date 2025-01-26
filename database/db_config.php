@@ -1,16 +1,20 @@
 <?php
-// db_config.php
+// Fetch database credentials from environment variables or use defaults for Render
+$host = getenv('DB_HOST') ?: 'dpg-cuaujpt6l47c739thvig-a';
+$port = getenv('DB_PORT') ?: 5432;
+$dbname = getenv('DB_NAME') ?: 'techfarm_nexus';
+$username = getenv('DB_USER') ?: 'techfarm_nexus_user';
+$password = getenv('DB_PASSWORD') ?: '3VWBl309pZM6hKn0F2LwAch5So9Cd9An';
 
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "techfarm_nexus";
+try {
+    // Create a connection to the PostgreSQL database
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname";
+    $conn = new PDO($dsn, $username, $password);
 
-// Create a connection to the database
-$conn = new mysqli($host, $username, $password, $database);
-
-// Check the connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+    // Set error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    echo "Connected successfully";
+} catch (PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
 }
 ?>
