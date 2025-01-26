@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: php-web-service
+    env: docker
+    region: us-central
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /
