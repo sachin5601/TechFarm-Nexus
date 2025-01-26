@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login</title>
+</head>
+
+<body>
+  <div class="container">
+    <input type="checkbox" id="flip">
+    <div class="cover">
+      <div class="front">
+        <img src="../Images/login.webp" alt="">
+        <div class="text">
+          <span class="text-1">Technical Farming is a <br> Future of INDIA</span>
+          <span class="text-2">Let's get connected with TechFarm</span>
+        </div>
+      </div>
+    </div>
+    <div class="forms">
+      <div class="form-content">
+        <div class="login-form">
+          <div class="title">Login</div>
+          <form action="login.php" method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-phone"></i>
+                <input type="text" name="phone" placeholder="Enter your mobile no." required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Enter your password" required>
+              </div>
+              <div class="text">
+                <a href="#" id="forgot-password-link">Forgot password?</a>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Login">
+              </div>
+              <div class="text sign-up-text">Don't have an account? <label for="flip">Signup now</label></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="signup-form">
+          <div class="title">Signup</div>
+          <form action="register.php" method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-user"></i>
+                <input type="text" name="name" placeholder="Enter your name" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-phone"></i>
+                <input type="text" name="phone" placeholder="Enter your mobile no" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="text" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="password" placeholder="Enter your password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Submit">
+              </div>
+              <div class="text sign-up-text">Already have an account? <label for="flip">Login now</label></div>
+            </div>
+          </form>
+        </div>
+
+        <div class="forgot-password-form" id="forgot-password-form" style="display: none;">
+          <div class="title">Reset Password</div>
+          <form action="reset_password.php" method="post">
+            <div class="input-boxes">
+              <div class="input-box">
+                <i class="fas fa-phone"></i>
+                <input type="text" name="phone" placeholder="Enter your mobile no." required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-envelope"></i>
+                <input type="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="input-box">
+                <i class="fas fa-lock"></i>
+                <input type="password" name="new_password" placeholder="Enter new password" required>
+              </div>
+              <div class="button input-box">
+                <input type="submit" value="Reset Password">
+              </div>
+              <div class="text sign-up-text">Remembered your password? <label for="flip">Login now</label></div>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('forgot-password-link').addEventListener('click', function (e) {
+      e.preventDefault(); // Prevent default anchor behavior
+      document.querySelector('.login-form').style.display = 'none'; // Hide login form
+      document.querySelector('.signup-form').style.display = 'none'; // Hide signup form
+      document.getElementById('forgot-password-form').style.display = 'block'; // Show reset password form
+    });
+
+    // Check if there's a success parameter in the URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const success = urlParams.get('success');
+
+    // If password reset is successful, show an alert
+    if (success === 'password_reset') {
+      alert('Your password has been reset successfully! You can now log in.');
+    }
+  </script>
+</body>
+
+</html>

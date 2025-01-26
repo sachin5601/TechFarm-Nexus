@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OTP Verification</title>
+</head>
+<body>
+    <h2>Verify OTP</h2>
+    <form action="otp.php" method="post">
+        <!-- Hidden field to pass the phone number from the previous step -->
+        <input type="hidden" name="phone" value="<?php echo $_GET['phone']; ?>">
+        
+        <!-- OTP input field -->
+        <label for="otp">Enter OTP:</label>
+        <input type="text" name="otp" required>
+        
+        <!-- Submit button -->
+        <input type="submit" value="Verify">
+    </form>
+</body>
+</html>

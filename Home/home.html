@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <title>TechFarm</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="home.css"> 
+</head>
+<body>
+    <div id="header-container"></div>
+    <div class="imagecontainer">
+        <div class="row">
+            <!-- First image - Soil Testing -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='../Soil_Testing/soiltesting.html';">
+                    <img src="../Images/home/soil-testing.jpeg" alt="Image 1">
+                    <b>Soil Testing</b>
+                </div>
+            </div>
+            <!-- Second image - Cultivation Tips -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='../Cultivation_Tips/cultivation.html';">
+                    <img src="../Images/home/cutivation.avif" alt="Image 2">
+                    <b>Cultivation Tips</b>
+                </div>
+            </div>
+            <!-- Third image - Weather -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='../Weather/weather.html';">
+                    <img src="../Images/home/weather.avif" alt="Image 3">
+                    <b>Weather</b>
+                </div>
+            </div>
+            <!-- Fourth image - Mandi Market View -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='../Mandi_Market/mandi_market.html';">
+                    <img src="../Images/home/Marketprice.png" alt="Image 1">
+                    <b>Mandi Market View</b>
+                </div>
+            </div>
+            <!-- Fifth image - Crop Recommendation -->
+            <div class="column">
+                <div class="image-card" id="cropRecCard">
+                    <img src="../Images/home/crop.jpeg" alt="Image 2">
+                    <b>Crop Recommendation</b>
+                </div>
+            </div>
+            <!-- Sixth image - AgroCraft -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='../agri/auth/FarmerLogin.php';">
+                    <img src="../Images/home/kirishi.webp" alt="Image 3">
+                    <b>AgroCraft</b>
+                </div>
+            </div>
+            <!-- Seventh image - Agri Mart -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='available.php';">
+                    <img src="../Images/home/Agrimart.jpg" alt="Image 1">
+                    <b>Agri Mart</b>
+                </div>
+            </div>
+            <!-- Eighth image - Community -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='page2.html';">
+                    <img src="../Images/home/community.jpg" alt="Image 2">
+                    <b>Community</b>
+                </div>
+            </div>
+            <!-- Ninth image - News -->
+            <div class="column">
+                <div class="image-card" onclick="location.href='../News/news.html';">
+                    <img src="../Images/home/news.png" alt="Image 3">
+                    <b>News</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer-container">Footer Content</div>
+
+    <script>
+        // Load the header
+        $("#header-container").load("header.html");
+
+        // Load the footer
+        $("#footer-container").load("footer.html");
+
+        // When Crop Recommendation card is clicked
+        $('#cropRecCard').on('click', function() {
+            // Redirect to the Flask app's index page
+            window.location.href = 'http://localhost:5000'; // URL of your Flask app
+        });
+    </script>
+</body>
+</html>
