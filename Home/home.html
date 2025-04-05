@@ -54,18 +54,19 @@
                     <b>AgroCraft</b>
                 </div>
             </div>
-            <!-- Seventh image - Agri Mart -->
+            <!-- Seventh image - Ferti Mart -->
             <div class="column">
-                <div class="image-card" onclick="location.href='available.php';">
-                    <img src="../Images/home/Agrimart.jpg" alt="Image 1">
-                    <b>Agri Mart</b>
+                <div class="image-card" id="fertimartCard">
+                    <img src="../Images/home/Agrimart.jpg" alt=" FertiMart">
+                    <b>FertiMart</b>
                 </div>
             </div>
+            
             <!-- Eighth image - Community -->
             <div class="column">
-                <div class="image-card" onclick="location.href='page2.html';">
-                    <img src="../Images/home/community.jpg" alt="Image 2">
-                    <b>Community</b>
+                <div class="image-card" id="pdd">
+                    <img src="../Images/home/pdd.png" alt="Image 2">
+                    <b>Plant disease detector</b>
                 </div>
             </div>
             <!-- Ninth image - News -->
@@ -92,6 +93,16 @@
             // Redirect to the Flask app's index page
             window.location.href = 'http://localhost:5000'; // URL of your Flask app
         });
+        // When FertiMart card is clicked
+    $('#fertimartCard').on('click', function() {
+        // Redirect to FertiMart Flask app (running on port 5001)
+        window.location.href = 'http://localhost:5001';
+    });
+
+    $('#pdd').on('click', function() {
+        // Redirect to pdd stramlit app (running on port 8501)
+        window.location.href = 'http://localhost:8501';
+    });
     </script>
 </body>
 </html>
